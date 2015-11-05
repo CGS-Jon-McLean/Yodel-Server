@@ -5,13 +5,13 @@
 	*/
 	
 	//Import API
-	require('yodel.php');
+	require('water_watch.php');
 	
 	//Encryption Keys, Link
 	require('secret.php');
 	
-	//New Yodel API
-	$yodel = new YodelAPI($link);
+	//New Water_Watch API
+	$Water_Watch = new Water_WatchAPI($link);
 	
 	//Arctro Base
 	$base = new ArctroBase($link);
@@ -25,7 +25,7 @@
 	}
 	
 	//Run API
-	$result = $yodel->handle_api($_REQUEST);
+	$result = $Water_Watch->handle_api($_REQUEST);
 	
 	echo json_encode($result);
 ?>
